@@ -4,7 +4,45 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>flashcards</title>
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="primary-box">
+			<div class="new-flashcard-box">
+				<button id="new-flashcard">New Flashcard</button>
+			</div>
+
+			<div id="deck">
+				<div id="cardlist"></div>
+			</div>
+		</div>
+		<!-- class-toggled pseudo-form for user input -->
+		<div class="question-box hidden" id="new-question-card">
+			<h2>New Flashcard</h2>
+			<div class="error-box">
+				<span class="hidden" id="error"
+					>One or more fields are still empty...</span
+				>
+			</div>
+			<label for="question">Question:</label>
+			<textarea
+				class="input"
+				id="question"
+				placeholder="What are we studying today?"
+			></textarea>
+			<label for="answer">Answer:</label>
+			<textarea
+				class="input"
+				id="answer"
+				rows="3"
+				placeholder="I think I know this one!"
+			></textarea>
+			<div id="buttons">
+				<button id="submit-btn">Submit</button>
+				<button id="close-btn">Cancel</button>
+			</div>
+		</div>
+	</body>
 </html>
